@@ -4,6 +4,7 @@ import Biwanger.AppService.clsAppServiceAdmin;
 import Biwanger.AppService.clsAppServiceUser;
 import Biwanger.DAO.clsDAO;
 import Biwanger.ObjetosDominio.*;
+import Biwanger.comun.DatosHardcoded;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -150,9 +151,9 @@ public class ServletContainer
      */
     @POST
     @Path("/anadirPuntos")
-    public Response anadirPuntosRequest(@FormParam("idJugador") int idJugador, @FormParam("puntos") int puntosAnadir, @FormParam("TA") int TA)
+    public Response anadirPuntosRequest(@FormParam("idJugador") int idJugador, @FormParam("puntos") int puntosAnadir, @FormParam("asistencias") int asistencias, @FormParam("goles") int goles, @FormParam("partidos") int partidos, @FormParam("TA") int TA, @FormParam("TR") int TR)
     {
-        adminService.anadirPuntos(idJugador, puntosAnadir,TA);
+        adminService.anadirPuntos(idJugador, puntosAnadir, asistencias, goles, partidos, TA, TR);
         return Response.ok().build();
     }
 

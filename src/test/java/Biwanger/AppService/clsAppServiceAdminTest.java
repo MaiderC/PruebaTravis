@@ -102,10 +102,9 @@ public class clsAppServiceAdminTest
     @Test
     public void anadirPuntos_test()
     {
-        //assertTrue(j1.getPuntos()==10);
-        //appservice.anadirPuntos(j1.getId(),2);
-        //assertTrue(dao.buscarJugador(j1.getId()).getPuntos()==12);
-        
+        assertTrue(j1.getPuntos()==10);
+       // appservice.anadirPuntos(j1.getId(),2);
+       // assertTrue(dao.buscarJugador(j1.getId()).getPuntos()==12);
     }
 
     @Test
